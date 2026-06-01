@@ -118,7 +118,14 @@ margin-top: 40px;
     margin-bottom: 20px;
     max-width: 800px;
 }
-#turma{
-    border: none;
-    border-radius: 30rem;
+
+
+.turma {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #021F4A;
+    color: white;
 }
+
