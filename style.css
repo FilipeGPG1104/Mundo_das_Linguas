@@ -3,3 +3,70 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+
+}
+
+
+/* HEADER */
+header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    aling-items: center;
+    padding: 15px 50px;
+
+}
+
+#Logo{
+    width: 50px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav img{
+    width: 25px;
+}
+
+nav input{
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    
+}
+
+#Login {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+#register{
+    padding: 10px 20px;
+    background-color: #021F4A;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#banner{
+    height: 100rem;
+}
+
+#planos{
+
+}
