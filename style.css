@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+    width: 100%;
+}
+
+
+/* HEADER */
+header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+
+}
+
+#Logo{
+    width: 50px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav img{
+    width: 25px;
+}
+
+nav input{
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    
+}
+
+#Login {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+#register{
+    padding: 10px 20px;
+    background-color: #021F4A;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#banner{
+    height: 1;
+}
+
+#planos{
+border: none;
+border-radius: 30rem;
+padding: 30px 50px;
+margin: 110px;
+font-weight: bold;
+cursor: pointer;
+font-size: 20px;
+margin-top: 40px;
+}
+
+#botao{
+    background-color: #021F4A;
+}
+
+#Parte2 {
+    margin: 50px;
+}
+
+#adolecente{
+    border: none;
+    border-radius: 4rem;
+    
+}
+#texto-adolecente{
+    text-align: center;
+}
+#subtexto-adolecente{
+    text-align: center;
+}
+#Parte2 > div:first-child{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+#Parte2 > div:first-child > div{
+    display: flex;
+    flex-direction: column;
+}
+
+#texto-adolecente{
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+#subtexto-adolecente{
+    text-align: left;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+
+.turma {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #021F4A;
+    color: white;
+}
+#Parte2 > div:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse; /* imagem à direita */
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+#Parte2 > div:nth-child(2) > div{
+    flex: 1;
+    text-align: left;
+}
+
+#texto-criancas{
+    margin-bottom: 15px;
+}
+
+#subtexto-criancas{
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+#Kids{
+    border-radius: 4rem;
+     max-width: 400px;
+}
+
+
+.form-campos p{
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#formulario{
+    background-color: #021F4A;
+    color: white;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+#preencha{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+#pessoas{
+    width: 500px;
+    height: auto;
+}
+
+.form-campos{
+    flex: 1;
+}
+
+.form-campos p{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-campos input[type="text"]{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+}
+
+#Enviar{
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    color: #021F4A;
+    font-weight: bold;
+    cursor: pointer;
+}
+<<<<<<< HEAD:SIte/style.css
+
+
+#textoSecreto {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#avisoErro {
+    color: red;
+    font-weight: bold;
+    margin-top: 15px;
+=======
+:root{
+    --azul-principal: #021F4A;
+    --cinza-texto: #333;
+    --branco: #fff;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--branco);
+    color: var(--cinza-texto);
+    line-height: 1.6;
+}
+/* SEÇÃO CRIANÇAS */
+#Parte2 > div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 80px;
+    padding: 40px;
+    background-color: #f8f9fc;
+    border-radius: 30px;
+}
+
+#Parte2 > div:nth-child(2) > div{
+    flex: 1;
+}
+
+#texto-criancas{
+    font-size: 2rem;
+    color: #021F4A;
+    margin-bottom: 15px;
+}
+
+#subtexto-criancas{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+#Kids{
+    width: 100%;
+    max-width: 450px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+#Parte2 > div:nth-child(2) .turma{
+    background-color: #021F4A;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#Parte2 > div:nth-child(2) .turma:hover{
+    background-color: #03306f;
+    transform: translateY(-2px);
+>>>>>>> b4dbf229d453d631258227f973949cff8d0eba16:style.css
+}
