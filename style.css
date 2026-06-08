@@ -219,3 +219,17 @@ margin-top: 40px;
     font-weight: bold;
     cursor: pointer;
 }
+
+
+#textoSecreto {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#avisoErro {
+    color: red;
+    font-weight: bold;
+    margin-top: 15px;
+}
