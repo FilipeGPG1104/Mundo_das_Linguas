@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Mundo das Línguas</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <div class="card">
+
+            <div class="lado-esquerdo">
+                <img src="site/img/logo.png" alt="Logo Mundo das Línguas" class="logo">
+
+                <h1>Mundo das Línguas</h1>
+
+                <p>
+                    Aprenda novos idiomas de forma simples, moderna e divertida.
+                </p>
+            </div>
+
+            <div class="lado-direito">
+
+                <!-- LOGIN -->
+                <div class="form-box active" id="loginBox">
+
+                    <h2>Login</h2>
+
+                    <p class="subtitulo">
+                        Entre na sua conta
+                    </p>
+
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" placeholder="Digite seu email">
+
+                    <label>Senha</label>
+                    <input type="password" id="loginSenha" placeholder="Digite sua senha">
+
+                    <p id="erroLogin" class="erro"></p>
+                    <p id="sucessoLogin" class="sucesso"></p>
+
+                    <button onclick="fazerLogin()">Entrar</button>
+
+                    <p class="trocar">
+                        Não tem conta?
+                        <span onclick="mostrarRegister()">Criar conta</span>
+                    </p>
+
+                    <a href="index.html" class="voltar">Voltar para o site</a>
+
+                </div>
+
+                <!-- REGISTER -->
+                <div class="form-box" id="registerBox">
+
+                    <h2>Register</h2>
+
+                    <p class="subtitulo">
+                        Crie sua conta
+                    </p>
+
+                    <label>Nome</label>
+                    <input type="text" id="registerNome" placeholder="Digite seu nome">
+
+                    <label>Email</label>
+                    <input type="email" id="registerEmail" placeholder="Digite seu email">
+
+                    <label>Senha</label>
+                    <input type="password" id="registerSenha" placeholder="Crie uma senha">
+
+                    <label>Confirmar senha</label>
+                    <input type="password" id="registerConfirmarSenha" placeholder="Confirme sua senha">
+
+                    <p id="erroRegister" class="erro"></p>
+                    <p id="sucessoRegister" class="sucesso"></p>
+
+                    <button onclick="fazerRegister()">Cadastrar</button>
+
+                    <p class="trocar">
+                        Já tem conta?
+                        <span onclick="mostrarLogin()">Fazer login</span>
+                    </p>
+
+                    <a href="index.html" class="voltar">Voltar para o site</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>

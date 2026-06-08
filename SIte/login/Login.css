@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #042554, #0b3d91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    max-width: 950px;
+    min-height: 550px;
+    margin: auto;
+    display: flex;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.lado-esquerdo {
+    width: 45%;
+    background: #042554;
+    color: white;
+    padding: 50px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.logo {
+    width: 130px;
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.lado-esquerdo h1 {
+    font-size: 34px;
+}
+
+.lado-esquerdo p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.lado-direito {
+    width: 55%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box {
+    width: 100%;
+    display: none;
+}
+
+.form-box.active {
+    display: block;
+}
+
+.form-box h2 {
+    color: #042554;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #222;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 18px;
+    padding: 0 15px;
+    border: 2px solid #dcdcdc;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #042554;
+}
+
+button {
+    width: 100%;
+    height: 48px;
+    background: #042554;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0b3d91;
+    transform: translateY(-2px);
+}
+
+.trocar {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.trocar span {
+    color: #042554;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.trocar span:hover {
+    text-decoration: underline;
+}
+
+.voltar {
+    display: block;
+    margin-top: 18px;
+    text-align: center;
+    color: #042554;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+.erro {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.sucesso {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .lado-esquerdo,
+    .lado-direito {
+        width: 100%;
+    }
+
+    .lado-esquerdo {
+        padding: 35px 25px;
+    }
+
+    .lado-direito {
+        padding: 35px 25px;
+    }
+
+    .form-box h2 {
+        font-size: 30px;
+    }
+}
