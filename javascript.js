@@ -2,9 +2,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
     const avisoErro = document.getElementById("avisoErro");
     const textoSecreto = document.getElementById("textoSecreto");
+    const botaoLogin = document.getElementById("Login");
+    const botaoRegister = document.getElementById("register");
 
     if (textoSecreto) {
         textoSecreto.style.display = "none";
+    }
+
+    if (botaoLogin) {
+        botaoLogin.addEventListener("click", function () {
+            window.location.href = "login/login.html";
+        });
+    }
+
+    if (botaoRegister) {
+        botaoRegister.addEventListener("click", function () {
+            window.location.href = "login/login.html";
+        });
     }
 
     const botaoEnviar = document.getElementById("Enviar");
