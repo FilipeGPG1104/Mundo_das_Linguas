@@ -9,7 +9,7 @@ body{
     background-color: white;
     color: #333;
     line-height: 1.6;
-
+    width: 100%;
 }
 
 
@@ -18,7 +18,7 @@ header{
     background-color: white;
     display: flex;
     justify-content: space-between;
-    aling-items: center;
+    align-items: center;
     padding: 15px 50px;
 
 }
@@ -156,10 +156,7 @@ margin-top: 40px;
      max-width: 400px;
 }
 
-#formulario{
-    background-color: #021F4A;
-    color: white
-}
+
 .form-campos p{
     text-align: left;
     margin-top: 15px;
@@ -169,10 +166,8 @@ margin-top: 40px;
 #formulario{
     background-color: #021F4A;
     color: white;
-    max-width: 1200px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 40px;
-    border-radius: 20px;
 }
 
 #preencha{
@@ -218,4 +213,68 @@ margin-top: 40px;
     color: #021F4A;
     font-weight: bold;
     cursor: pointer;
+}
+:root{
+    --azul-principal: #021F4A;
+    --cinza-texto: #333;
+    --branco: #fff;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--branco);
+    color: var(--cinza-texto);
+    line-height: 1.6;
+}
+/* SEÇÃO CRIANÇAS */
+#Parte2 > div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 80px;
+    padding: 40px;
+    background-color: #f8f9fc;
+    border-radius: 30px;
+}
+
+#Parte2 > div:nth-child(2) > div{
+    flex: 1;
+}
+
+#texto-criancas{
+    font-size: 2rem;
+    color: #021F4A;
+    margin-bottom: 15px;
+}
+
+#subtexto-criancas{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+#Kids{
+    width: 100%;
+    max-width: 450px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+#Parte2 > div:nth-child(2) .turma{
+    background-color: #021F4A;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#Parte2 > div:nth-child(2) .turma:hover{
+    background-color: #03306f;
+    transform: translateY(-2px);
 }
