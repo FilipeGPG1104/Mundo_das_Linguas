@@ -82,3 +82,4 @@ document.addEventListener("DOMContentLoaded", function () {
         botaoEnviar.addEventListener("click", validarFormulario);
     }
 });
+

@@ -214,7 +214,7 @@ margin-top: 40px;
     font-weight: bold;
     cursor: pointer;
 }
-<<<<<<< HEAD:SIte/style.css
+
 
 
 #textoSecreto {
@@ -228,7 +228,6 @@ margin-top: 40px;
     color: red;
     font-weight: bold;
     margin-top: 15px;
-=======
 :root{
     --azul-principal: #021F4A;
     --cinza-texto: #333;
@@ -257,6 +256,28 @@ body{
     flex: 1;
 }
 
+/* SEÇÃO CRIANÇAS */
+#Parte2 > div:nth-child(2){
+    display: flex;
+    flex-direction: row; /* imagem à esquerda */
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 80px;
+    padding: 40px;
+}
+
+#Parte2 > div:nth-child(2) > div{
+    flex: 1;
+}
+
+#Kids{
+    width: 100%;
+    max-width: 450px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
 #texto-criancas{
     font-size: 2rem;
     color: #021F4A;
@@ -266,17 +287,25 @@ body{
 #subtexto-criancas{
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
     margin-bottom: 25px;
-    max-width: 600px;
 }
 
-#Kids{
-    width: 100%;
-    max-width: 450px;
+/* BOTÃO MAIOR */
+#Parte2 > div:nth-child(2) .turma{
+    background-color: #021F4A;
+    color: white;
+    border: none;
     border-radius: 30px;
-    object-fit: cover;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 18px 40px; /* aumenta o tamanho */
+    font-size: 20px;    /* texto maior */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#Parte2 > div:nth-child(2) .turma:hover{
+    background-color: #03306f;
+    transform: translateY(-2px);
 }
 
 #Parte2 > div:nth-child(2) .turma{
@@ -292,7 +321,6 @@ body{
 #Parte2 > div:nth-child(2) .turma:hover{
     background-color: #03306f;
     transform: translateY(-2px);
->>>>>>> b4dbf229d453d631258227f973949cff8d0eba16:style.css
 }
 
 baixo{
