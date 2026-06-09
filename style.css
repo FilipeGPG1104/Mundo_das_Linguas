@@ -294,3 +294,9 @@ body{
     transform: translateY(-2px);
 >>>>>>> b4dbf229d453d631258227f973949cff8d0eba16:style.css
 }
+
+baixo{
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
