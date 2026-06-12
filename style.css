@@ -156,14 +156,14 @@ nav input{
 }
 
 #planos{
-border: none;
-border-radius: 30rem;
-padding: 30px 50px;
-margin: 110px;
-font-weight: bold;
-cursor: pointer;
-font-size: 20px;
-margin-top: 40px;
+    border: none;
+    border-radius: 30rem;
+    padding: 30px 50px;
+    margin: 110px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 40px;
 }
 
 #botao{
@@ -416,8 +416,14 @@ body{
     transform: translateY(-2px);
 }
 
-baixo{
+#baixo{
     text-align: center;
-    padding: 20px 0;
+    padding: 24px 20px;
     margin-top: 50px;
+    background: linear-gradient(90deg, #021F4A 0%, #03306f 100%);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-top: 1px solid rgba(255,255,255,0.15);
 }
