@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const textoSecreto = document.getElementById("textoSecreto");
     const botaoLogin = document.getElementById("Login");
     const botaoRegister = document.getElementById("register");
+    const phoneIcon = document.getElementById("phone-icon-home");
+    const phoneBubble = document.getElementById("phone-bubble-home");
+    const locationIcon = document.getElementById("location-icon-home");
+    const locationBubble = document.getElementById("location-bubble-home");
 
     if (textoSecreto) {
         textoSecreto.style.display = "none";
@@ -24,6 +28,27 @@ document.addEventListener("DOMContentLoaded", function () {
             abrirLogin("register");
         });
     }
+
+    if (phoneIcon && phoneBubble) {
+        phoneIcon.addEventListener("click", function (event) {
+            event.stopPropagation();
+            phoneBubble.classList.toggle("show");
+            locationBubble.classList.remove("show");
+        });
+    }
+
+    if (locationIcon && locationBubble) {
+        locationIcon.addEventListener("click", function (event) {
+            event.stopPropagation();
+            locationBubble.classList.toggle("show");
+            phoneBubble.classList.remove("show");
+        });
+    }
+
+    document.addEventListener("click", function () {
+        if (phoneBubble) phoneBubble.classList.remove("show");
+        if (locationBubble) locationBubble.classList.remove("show");
+    });
 
     const botaoPlanos = document.getElementById("planos");
     if (botaoPlanos) {
