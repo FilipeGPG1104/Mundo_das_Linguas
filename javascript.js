@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll(".turma").forEach(function (botaoTurma) {
         botaoTurma.addEventListener("click", function () {
-            window.location.href = "Planos/Planos.html";
+            abrirLogin("register");
         });
     });
 
