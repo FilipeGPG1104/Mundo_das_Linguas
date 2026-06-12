@@ -1,3 +1,7 @@
+function abrirLogin(mode) {
+    window.location.href = `login/login.html?mode=${mode}`;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
     const avisoErro = document.getElementById("avisoErro");
@@ -11,15 +15,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (botaoLogin) {
         botaoLogin.addEventListener("click", function () {
-            window.location.href = "login/login.html";
+            abrirLogin("login");
         });
     }
 
     if (botaoRegister) {
         botaoRegister.addEventListener("click", function () {
-            window.location.href = "login/login.html";
+            abrirLogin("register");
         });
     }
+
+    const botaoPlanos = document.getElementById("planos");
+    if (botaoPlanos) {
+        botaoPlanos.addEventListener("click", function () {
+            window.location.href = "Planos/Planos.html";
+        });
+    }
+
+    document.querySelectorAll(".turma").forEach(function (botaoTurma) {
+        botaoTurma.addEventListener("click", function () {
+            window.location.href = "Planos/Planos.html";
+        });
+    });
 
     const botaoEnviar = document.getElementById("Enviar");
 

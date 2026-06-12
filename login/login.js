@@ -12,6 +12,12 @@ function clearLoginMessages() {
     });
 }
 
+function getModeFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const mode = params.get('mode');
+    return mode === 'register' ? 'register' : 'login';
+}
+
 function mostrarRegister() {
     const loginBox = document.getElementById('loginBox');
     const registerBox = document.getElementById('registerBox');
@@ -73,7 +79,7 @@ function fazerLogin() {
     if (sucesso) sucesso.textContent = 'Login realizado com sucesso! Redirecionando...';
 
     setTimeout(function () {
-        window.location.href = '../index.html';
+        window.location.href = '../Planos/Planos.html';
     }, 1000);
 }
 
@@ -112,9 +118,15 @@ function fazerRegister() {
 window.addEventListener('DOMContentLoaded', function () {
     const loginBox = document.getElementById('loginBox');
     const registerBox = document.getElementById('registerBox');
+    const mode = getModeFromUrl();
 
     if (loginBox && registerBox) {
-        loginBox.classList.add('active');
-        registerBox.classList.remove('active');
+        if (mode === 'register') {
+            loginBox.classList.remove('active');
+            registerBox.classList.add('active');
+        } else {
+            loginBox.classList.add('active');
+            registerBox.classList.remove('active');
+        }
     }
 });

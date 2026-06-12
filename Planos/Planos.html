@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planos | Mundo das Línguas</title>
+  <link rel="stylesheet" href="Planos.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <a href="../index.html" class="logo-area" aria-label="Voltar para a página inicial">
+        <img src="../img/logo.png" alt="Logo Mundo das Línguas" class="logo-image">
+        <div class="logo-text-block">
+          <span class="logo-text">MUNDO DAS</span>
+          <span class="logo-sub">LÍNGUAS</span>
+        </div>
+      </a>
+
+      <div class="nav-right">
+        <button class="btn-login" id="btn-login-planos" type="button">Login</button>
+        <button class="btn-register" id="btn-register-planos" type="button">Register</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="hero-tag">Planos &amp; Preços</p>
+        <h1>Escolha o plano ideal <span>para você</span></h1>
+        <p class="hero-copy">Aprenda idiomas com professores nativos e metodologia comprovada.</p>
+
+        <div class="hero-badges" aria-label="Idiomas disponíveis">
+          <span class="lang-badge">🇺🇸 Inglês</span>
+          <span class="lang-badge">🇪🇸 Espanhol</span>
+          <span class="lang-badge">🇫🇷 Francês</span>
+          <span class="lang-badge">🇩🇪 Alemão</span>
+          <span class="lang-badge">🇮🇹 Italiano</span>
+          <span class="lang-badge">🇨🇳 Mandarim</span>
+          <span class="lang-badge">🇯🇵 Japonês</span>
+        </div>
+
+        <div class="toggle-wrap">
+          <span class="toggle-label">Mensal</span>
+          <label class="toggle" aria-label="Alternar plano mensal ou anual">
+            <input type="checkbox" id="billingToggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="toggle-label">Anual</span>
+          <span class="badge-save">Economize até 20%</span>
+        </div>
+      </section>
+
+      <section class="plans-section">
+        <div class="plans-grid">
+          <article class="plan-card">
+            <div class="plan-header">
+              <div class="plan-icon basic">📘</div>
+              <h2 class="plan-name">Básico</h2>
+              <p class="plan-desc">Ideal para quem está começando a aprender idiomas com calma e consistência.</p>
+            </div>
+
+            <div class="plan-price">
+              <p class="price-label">A partir de</p>
+              <div class="price-main">
+                <span class="price-currency">R$</span>
+                <span class="price-value monthly" data-monthly="129">129</span>
+                <span class="price-value annual" data-annual="99">99</span>
+                <span class="price-period">/mês</span>
+              </div>
+              <p class="price-annual-note" data-annual-total="R$ 1.188/ano">R$ 1.188/ano</p>
+            </div>
+
+            <div class="plan-features">
+              <p class="features-title">Incluso no plano</p>
+              <div class="feature-item"><span class="icon check">✓</span> 2 aulas por semana (45 min)</div>
+              <div class="feature-item"><span class="icon check">✓</span> 1 idioma à escolha</div>
+              <div class="feature-item"><span class="icon check">✓</span> Material didático digital</div>
+              <div class="feature-item"><span class="icon check">✓</span> Acesso à plataforma online</div>
+              <div class="feature-item"><span class="icon check">✓</span> Certificado de conclusão</div>
+              <div class="feature-item"><span class="icon cross">✕</span> Aulas com professor nativo</div>
+              <div class="feature-item"><span class="icon cross">✕</span> Conversação ao vivo</div>
+              <div class="feature-item"><span class="icon cross">✕</span> Suporte prioritário</div>
+            </div>
+
+            <div class="plan-footer">
+              <button class="btn-plan outline" type="button">Começar agora ↗</button>
+            </div>
+          </article>
+
+          <article class="plan-card featured">
+            <div class="popular-badge">⭐ Mais popular</div>
+            <div class="plan-header">
+              <div class="plan-icon pro">✨</div>
+              <h2 class="plan-name">Pro</h2>
+              <p class="plan-desc">Perfeito para quem quer evoluir rápido com aulas mais intensivas e completas.</p>
+            </div>
+
+            <div class="plan-price">
+              <p class="price-label">A partir de</p>
+              <div class="price-main">
+                <span class="price-currency">R$</span>
+                <span class="price-value monthly" data-monthly="249">249</span>
+                <span class="price-value annual" data-annual="199">199</span>
+                <span class="price-period">/mês</span>
+              </div>
+              <p class="price-annual-note" data-annual-total="R$ 2.388/ano">R$ 2.388/ano</p>
+            </div>
+
+            <div class="plan-features">
+              <p class="features-title">Incluso no plano</p>
+              <div class="feature-item"><span class="icon check">✓</span> 4 aulas por semana (60 min)</div>
+              <div class="feature-item"><span class="icon check">✓</span> Até 2 idiomas simultâneos</div>
+              <div class="feature-item"><span class="icon check">✓</span> Material didático completo</div>
+              <div class="feature-item"><span class="icon check">✓</span> Acesso à plataforma online</div>
+              <div class="feature-item"><span class="icon check">✓</span> Certificado de conclusão</div>
+              <div class="feature-item"><span class="icon check">✓</span> Aulas com professor nativo</div>
+              <div class="feature-item"><span class="icon check">✓</span> Conversação ao vivo 2×/mês</div>
+              <div class="feature-item"><span class="icon cross">✕</span> Suporte prioritário 24h</div>
+            </div>
+
+            <div class="plan-footer">
+              <button class="btn-plan accent" type="button">Assinar Pro ↗</button>
+            </div>
+          </article>
+
+          <article class="plan-card">
+            <div class="plan-header">
+              <div class="plan-icon premium">💎</div>
+              <h2 class="plan-name">Premium</h2>
+              <p class="plan-desc">Para quem quer o máximo: imersão total e acompanhamento personalizado.</p>
+            </div>
+
+            <div class="plan-price">
+              <p class="price-label">A partir de</p>
+              <div class="price-main">
+                <span class="price-currency">R$</span>
+                <span class="price-value monthly" data-monthly="399">399</span>
+                <span class="price-value annual" data-annual="319">319</span>
+                <span class="price-period">/mês</span>
+              </div>
+              <p class="price-annual-note" data-annual-total="R$ 3.828/ano">R$ 3.828/ano</p>
+            </div>
+
+            <div class="plan-features">
+              <p class="features-title">Incluso no plano</p>
+              <div class="feature-item"><span class="icon check">✓</span> Aulas ilimitadas (diárias)</div>
+              <div class="feature-item"><span class="icon check">✓</span> Idiomas ilimitados</div>
+              <div class="feature-item"><span class="icon check">✓</span> Material didático exclusivo</div>
+              <div class="feature-item"><span class="icon check">✓</span> Acesso à plataforma online</div>
+              <div class="feature-item"><span class="icon check">✓</span> Certificados reconhecidos</div>
+              <div class="feature-item"><span class="icon check">✓</span> Aulas com professor nativo</div>
+              <div class="feature-item"><span class="icon check">✓</span> Conversação ao vivo ilimitada</div>
+              <div class="feature-item"><span class="icon check">✓</span> Suporte prioritário 24h</div>
+            </div>
+
+            <div class="plan-footer">
+              <button class="btn-plan filled" type="button">Assinar Premium ↗</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="compare-row">
+          <button class="compare-link" type="button">Ver comparativo completo dos planos ↗</button>
+        </div>
+
+        <div class="guarantee">
+          <span>🛡️</span>
+          <span>Garantia de 7 dias — cancele quando quiser, sem multa</span>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <section class="faq-section">
+        <h2 class="faq-title">Perguntas frequentes</h2>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" data-target="faq-1">
+            Posso trocar de plano a qualquer momento?
+            <span class="chevron">⌄</span>
+          </button>
+          <div class="faq-a" id="faq-1">Sim! Você pode fazer upgrade ou downgrade do seu plano a qualquer momento. A diferença de valor é calculada proporcionalmente.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" data-target="faq-2">
+            As aulas são presenciais ou online?
+            <span class="chevron">⌄</span>
+          </button>
+          <div class="faq-a" id="faq-2">Oferecemos aulas tanto presenciais nas nossas unidades quanto 100% online via plataforma. Você escolhe o formato que preferir.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" data-target="faq-3">
+            Quais formas de pagamento são aceitas?
+            <span class="chevron">⌄</span>
+          </button>
+          <div class="faq-a" id="faq-3">Aceitamos cartão de crédito, débito, PIX e boleto bancário. No plano anual é possível parcelar em até 12× sem juros.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" data-target="faq-4">
+            Os certificados são reconhecidos?
+            <span class="chevron">⌄</span>
+          </button>
+          <div class="faq-a" id="faq-4">Os certificados do plano Premium são reconhecidos pelo MEC e equivalem a comprovação de proficiência para processos seletivos e currículos.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="planos.js"></script>
+</body>
+</html>
