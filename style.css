@@ -214,7 +214,7 @@ margin-top: 40px;
     font-weight: bold;
     cursor: pointer;
 }
-<<<<<<< HEAD:SIte/style.css
+     HEAD:SIte/style.css
 
 
 #textoSecreto {
@@ -228,8 +228,6 @@ margin-top: 40px;
     color: red;
     font-weight: bold;
     margin-top: 15px;
-=======
-:root{
     --azul-principal: #021F4A;
     --cinza-texto: #333;
     --branco: #fff;
@@ -292,5 +290,9 @@ body{
 #Parte2 > div:nth-child(2) .turma:hover{
     background-color: #03306f;
     transform: translateY(-2px);
->>>>>>> b4dbf229d453d631258227f973949cff8d0eba16:style.css
+
 }
+
+
+
+
