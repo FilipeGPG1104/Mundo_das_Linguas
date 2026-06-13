@@ -465,3 +465,74 @@ body {
   cursor: pointer;
   margin-top: 12px;
 }
+
+@media (max-width: 900px) {
+  .card-setup {
+    padding: 28px;
+  }
+
+  .langs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .schedule-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .setup-wrap {
+    padding: 16px 12px 40px;
+  }
+
+  .progress-header {
+    margin-bottom: 20px;
+  }
+
+  .card-setup {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .steps-bar {
+    gap: 6px;
+  }
+
+  .step-dot {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+  }
+
+  .step-lbl {
+    width: 60px;
+    font-size: 9px;
+  }
+
+  .plan-chips {
+    flex-direction: column;
+  }
+
+  .langs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-title {
+    font-size: 19px;
+  }
+
+  .setup-sub {
+    margin-bottom: 20px;
+  }
+
+  .btn-next,
+  .btn-back,
+  .btn-go {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
