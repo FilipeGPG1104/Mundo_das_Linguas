@@ -7,21 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img id="Logo" src="img/logo.png" alt="Logo">
-        <nav>
-            <img src="img/Icone Busca.png" alt="">
-            <input type="text" placeholder="Buscar Curso" class="barra_de_pesquisa">
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <img id="Logo" src="img/logo.png" alt="Logo Mundo das Línguas">
+            <span>Mundo das Línguas</span>
+        </a>
+
+        <nav class="top-nav">
+            <div class="search-box">
+                <img src="img/Icone Busca.png" alt="Ícone de busca">
+                <input type="text" placeholder="Buscar Curso" class="barra_de_pesquisa">
+            </div>
+
             <div class="phone-wrapper-home">
                 <button class="phone-icon-home" id="phone-icon-home" type="button" aria-label="Mostrar telefone de contato">📞</button>
                 <div class="phone-bubble-home" id="phone-bubble-home">+55 (15) 99131-5008</div>
             </div>
+
             <div class="location-wrapper-home">
                 <button class="location-icon-home" id="location-icon-home" type="button" aria-label="Mostrar localização">📍</button>
                 <div class="location-bubble-home" id="location-bubble-home">Rua das Línguas, 123 - São Paulo</div>
             </div>
-            <button id="Login">Login</button>
-            <button id="register">Register</button>  
+
+            <div class="header-actions">
+                <button id="Login" type="button">Login</button>
+                <button id="register" type="button">Register</button>
+            </div>
         </nav>
     </header>
     <main>
