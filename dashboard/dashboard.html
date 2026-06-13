@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minha Área - Mundo das Línguas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <a class="top-logo" href="#">
+    <div class="logo-g">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="white" stroke-width="1.5"/>
+        <path d="M3 12h18M12 3c-2 3-3 5.5-3 9s1 6 3 9M12 3c2 3 3 5.5 3 9s-1 6-3 9" stroke="white" stroke-width="1.5"/>
+      </svg>
+    </div>
+    MUNDO DAS LÍNGUAS
+  </a>
+  <nav class="top-nav">
+    <a href="#"><i class="ti ti-player-play"></i> Começar aqui</a>
+    <a href="#"><i class="ti ti-book"></i> Cursos</a>
+    <a href="#"><i class="ti ti-users"></i> Professor</a>
+    <a href="#"><i class="ti ti-headset"></i> Suporte</a>
+  </nav>
+  <div class="top-right">
+    <div class="bell-wrap">
+      <i class="ti ti-bell" style="font-size:20px;color:#888"></i>
+      <span class="bell-dot"></span>
+    </div>
+    <div class="avatar-top" id="profileAvatar" onclick="openProfileModal()" role="button" tabindex="0">MR</div>
+    <span class="top-name" id="profileName" onclick="openProfileModal()">MARIA</span>
+    <span class="top-exit" onclick="sairDashboard()">
+      <i class="ti ti-logout" style="font-size:17px"></i> Sair
+    </span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-banner">
+  <div class="hero-deco"></div>
+  <div class="hero-avatar" id="heroAvatar" onclick="openProfileModal()" role="button" tabindex="0">MR</div>
+  <div class="hero-info">
+    <h1 id="heroGreeting">Seja bem-vinda, MARIA!</h1>
+    <div class="hero-chips">
+      <span class="hero-chip-user" id="heroUserTag">mariasilva</span>
+      <span class="hero-chip-plan" id="heroPlanTag">
+        <i class="ti ti-diamond" style="font-size:12px"></i> Plano Pro
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tabs-row">
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('em', this)">Em andamento</div>
+    <div class="tab" onclick="switchTab('con', this)">Concluídos</div>
+    <div class="tab" onclick="switchTab('cert', this)">Certificados</div>
+  </div>
+  <div class="tab-search">
+    <input type="text" placeholder="Filtrar cursos..." oninput="filterCourses(this.value)">
+  </div>
+</div>
+
+<!-- BODY -->
+<main class="body-pad">
+
+  <!-- ALERT -->
+  <div class="alert-box" id="alertBox">
+    <button class="alert-close" onclick="document.getElementById('alertBox').style.display='none'">×</button>
+    <div class="alert-title">
+      <i class="ti ti-speakerphone" style="font-size:17px;color:#c09200"></i>
+      Atenção, aluna!
+    </div>
+    <p style="font-size:13px;color:#7a6200;margin-bottom:12px;">
+      Seu acesso aos cursos ao vivo está disponível apenas no dia e horário programados.
+    </p>
+    <div class="alert-row">
+      <i class="ti ti-calendar" style="font-size:16px;color:#0a1f5c"></i>
+      Próxima aula: <b>Sábado</b>
+    </div>
+    <div class="alert-row">
+      <i class="ti ti-clock" style="font-size:16px;color:#0a1f5c"></i>
+      Horário: <b>10:00h às 12:00h</b>
+    </div>
+    <span class="alert-link">
+      <i class="ti ti-chevron-right" style="font-size:13px"></i> Ver mais horários da turma
+    </span>
+    <div class="alert-footer">
+      Caso tenha dúvidas ou precise de suporte, entre em contato com nossa equipe.
+    </div>
+  </div>
+
+  <!-- ABA: EM ANDAMENTO -->
+  <div id="tab-em">
+
+    <div class="section-label">Meu progresso</div>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-label">Cursos ativos</div>
+        <div class="stat-val">3</div>
+        <div class="stat-sub">de 6 disponíveis</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Aulas assistidas</div>
+        <div class="stat-val">47</div>
+        <div class="stat-sub">este mês</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Horas de estudo</div>
+        <div class="stat-val">28</div>
+        <div class="stat-sub">total acumulado</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Certificados</div>
+        <div class="stat-val">1</div>
+        <div class="stat-sub">concluído</div>
+      </div>
+    </div>
+
+    <div class="section-label">Meus cursos</div>
+    <div class="courses-grid" id="coursesGrid">
+      <div id="courses-empty" style="display:none; width:100%; padding:24px; border:1px dashed #c8d0e4; border-radius:12px; color:#6b7280; text-align:center;">
+        Nenhum curso disponível para os idiomas selecionados.
+      </div>
+
+      <div class="course-card" data-name="inglês básico" data-lang="en" onclick="alert('Abrindo Inglês Básico...')">
+        <div class="course-thumb en">🇺🇸</div>
+        <div class="course-body">
+          <div class="course-name">Inglês Básico</div>
+          <div class="course-meta">40 Aulas · Professor nativo</div>
+          <div class="prog-wrap"><div class="prog-fill" style="width:62%"></div></div>
+          <div class="prog-row"><span>Progresso</span><span>62%</span></div>
+          <div class="status-badge badge-active">
+            <i class="ti ti-player-play" style="font-size:10px"></i> Em andamento
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-name="espanhol intermediário" data-lang="es" onclick="alert('Abrindo Espanhol Intermediário...')">
+        <div class="course-thumb es">🇪🇸</div>
+        <div class="course-body">
+          <div class="course-name">Espanhol Intermediário</div>
+          <div class="course-meta">35 Aulas · Professor nativo</div>
+          <div class="prog-wrap"><div class="prog-fill" style="width:28%"></div></div>
+          <div class="prog-row"><span>Progresso</span><span>28%</span></div>
+          <div class="status-badge badge-active">
+            <i class="ti ti-player-play" style="font-size:10px"></i> Em andamento
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-name="francês básico" data-lang="fr" onclick="alert('Abrindo Francês Básico...')">
+        <div class="course-thumb fr">🇫🇷</div>
+        <div class="course-body">
+          <div class="course-name">Francês Básico</div>
+          <div class="course-meta">38 Aulas · Professor nativo</div>
+          <div class="prog-wrap"><div class="prog-fill" style="width:10%"></div></div>
+          <div class="prog-row"><span>Progresso</span><span>10%</span></div>
+          <div class="status-badge badge-new">
+            <i class="ti ti-sparkles" style="font-size:10px"></i> Novo
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-name="alemão iniciante" data-lang="de" style="opacity:.55"
+           onclick="alert('Este curso está bloqueado. Faça upgrade do seu plano para desbloquear.')">
+        <div class="course-thumb de">🇩🇪</div>
+        <div class="course-body">
+          <div class="course-name">Alemão Iniciante</div>
+          <div class="course-meta">30 Aulas · Bloqueado</div>
+          <div class="prog-wrap"><div class="prog-fill" style="width:0%"></div></div>
+          <div class="prog-row"><span>Progresso</span><span>0%</span></div>
+          <div class="status-badge badge-locked">
+            <i class="ti ti-lock" style="font-size:10px"></i> Bloqueado
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-name="italiano básico" data-lang="it" style="opacity:.55"
+           onclick="alert('Este curso está bloqueado. Faça upgrade do seu plano para desbloquear.')">
+        <div class="course-thumb it">🇮🇹</div>
+        <div class="course-body">
+          <div class="course-name">Italiano Básico</div>
+          <div class="course-meta">32 Aulas · Bloqueado</div>
+          <div class="prog-wrap"><div class="prog-fill" style="width:0%"></div></div>
+          <div class="prog-row"><span>Progresso</span><span>0%</span></div>
+          <div class="status-badge badge-locked">
+            <i class="ti ti-lock" style="font-size:10px"></i> Bloqueado
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-name="mandarim básico" data-lang="zh" style="opacity:.55"
+           onclick="alert('Este curso está bloqueado. Faça upgrade do seu plano para desbloquear.')">
+        <div class="course-thumb zh">🇨🇳</div>
+        <div class="course-body">
+          <div class="course-name">Mandarim Básico</div>
+          <div class="course-meta">45 Aulas · Bloqueado</div>
+          <div class="prog-wrap"><div class="prog-fill" style="width:0%"></div></div>
+          <div class="prog-row"><span>Progresso</span><span>0%</span></div>
+          <div class="status-badge badge-locked">
+            <i class="ti ti-lock" style="font-size:10px"></i> Bloqueado
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="next-class-box">
+      <div class="next-left">
+        <div class="next-icon">📅</div>
+        <div>
+          <div class="next-title">Próxima aula ao vivo — Inglês Básico</div>
+          <div class="next-sub">Sábado · 10:00h às 12:00h · com Prof. James</div>
+        </div>
+      </div>
+      <button class="btn-enter" onclick="alert('Entrando na sala de aula...')">
+        <i class="ti ti-video"></i> Entrar na aula
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ABA: CONCLUÍDOS -->
+  <div id="tab-con" style="display:none">
+    <div class="concluded-empty">
+      <i class="ti ti-trophy" style="color:#c0c8da"></i>
+      Você ainda não concluiu nenhum curso.<br>
+      <span style="font-size:13px">Continue estudando para conquistar seu primeiro certificado!</span>
+    </div>
+  </div>
+
+  <!-- ABA: CERTIFICADOS -->
+  <div id="tab-cert" style="display:none">
+    <div class="section-label">Meus certificados</div>
+    <div class="cert-card">
+      <div class="cert-left">
+        <div class="cert-icon">🏆</div>
+        <div>
+          <div class="cert-name">Inglês Básico — Nível A1</div>
+          <div class="cert-sub">Concluído em 12 de março de 2025</div>
+        </div>
+      </div>
+      <button class="btn-cert" onclick="alert('Baixando certificado...')">
+        <i class="ti ti-download"></i> Baixar PDF
+      </button>
+    </div>
+    <div style="text-align:center;padding:32px 0;color:#9ba8c0;font-size:13px;">
+      <i class="ti ti-lock" style="font-size:22px;display:block;margin-bottom:8px;color:#c0c8da"></i>
+      Mais certificados serão liberados conforme você concluir os cursos.
+    </div>
+  </div>
+
+</main>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

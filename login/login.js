@@ -12,6 +12,21 @@ function clearLoginMessages() {
     });
 }
 
+function aplicarTransicao(destino) {
+    const overlay = document.createElement('div');
+    overlay.id = 'page-transition-overlay';
+    overlay.style.cssText = 'position:fixed; inset:0; background:#0f172a; opacity:0; z-index:9999; pointer-events:none; transition:opacity 0.35s ease;';
+    document.body.appendChild(overlay);
+
+    requestAnimationFrame(function () {
+        overlay.style.opacity = '1';
+    });
+
+    setTimeout(function () {
+        window.location.href = destino;
+    }, 350);
+}
+
 function getModeFromUrl() {
     const params = new URLSearchParams(window.location.search);
     const mode = params.get('mode');
@@ -76,11 +91,24 @@ function fazerLogin() {
         return;
     }
 
+    try {
+        const cadastro = JSON.parse(localStorage.getItem('mundoLinguasCadastro') || '{}');
+        const dadosValidos = cadastro.email && cadastro.senha && cadastro.email.toLowerCase() === email.toLowerCase() && cadastro.senha === senha;
+
+        if (!dadosValidos) {
+            if (erro) erro.textContent = 'E-mail ou senha não conferem com o cadastro.';
+            return;
+        }
+    } catch (error) {
+        if (erro) erro.textContent = 'Nenhum cadastro encontrado para esse e-mail.';
+        return;
+    }
+
     if (sucesso) sucesso.textContent = 'Login realizado com sucesso! Redirecionando...';
 
     setTimeout(function () {
-        window.location.href = '../Planos/Planos.html';
-    }, 1000);
+        aplicarTransicao('../dashboard/dashboard.html');
+    }, 400);
 }
 
 function fazerRegister() {
@@ -111,8 +139,17 @@ function fazerRegister() {
         return;
     }
 
-    if (sucesso) sucesso.textContent = 'Cadastro realizado com sucesso! Agora faça login.';
-    mostrarLogin();
+    localStorage.setItem('mundoLinguasCadastro', JSON.stringify({
+        nome: nome,
+        email: email,
+        senha: senha
+    }));
+
+    if (sucesso) sucesso.textContent = 'Cadastro realizado com sucesso! Redirecionando para a configuração...';
+
+    setTimeout(function () {
+        aplicarTransicao('../Onboard/config.html');
+    }, 400);
 }
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -129,4 +166,11 @@ window.addEventListener('DOMContentLoaded', function () {
             registerBox.classList.remove('active');
         }
     }
+
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.35s ease';
+
+    requestAnimationFrame(function () {
+        document.body.style.opacity = '1';
+    });
 });
